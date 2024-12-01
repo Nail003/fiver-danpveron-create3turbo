@@ -43,7 +43,8 @@
     "ui-add": {
       "cache": false,
       "interactive": true
-    }
+    },
+    "test": {}
   },
   "globalEnv": [
     "POSTGRES_URL",
