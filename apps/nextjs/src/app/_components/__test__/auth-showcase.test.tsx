@@ -40,7 +40,7 @@ vi.mock("@acme/auth", () => ({
 
 const { auth, signIn, signOut } = await import("@acme/auth");
 
-describe("AuthShowcase", () => {
+describe("AuthShowcase Component", () => {
   it("renders sign-in button when no session is active", async () => {
     auth.mockResolvedValue(null);
 
