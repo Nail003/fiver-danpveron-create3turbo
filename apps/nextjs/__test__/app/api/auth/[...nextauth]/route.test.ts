@@ -19,7 +19,7 @@ vi.mock("next/headers", () => ({
   cookies: vi.fn(),
 }));
 
-describe("API Route Tests", () => {
+describe("[nextauth] Api Route Test", () => {
   let mockCookies: any;
 
   beforeEach(() => {
