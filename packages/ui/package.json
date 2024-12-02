@@ -8,6 +8,10 @@
       "types": "./dist/src/index.d.ts",
       "default": "./src/index.ts"
     },
+    "./button": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./src/button.tsx"
+    },
     "./*": {
       "types": "./dist/src/*.d.ts",
       "default": [
