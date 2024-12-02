@@ -1,3 +1,5 @@
+import React from "react";
+
 import { auth, signIn, signOut } from "@acme/auth";
 import { Button } from "@acme/ui/button";
 
