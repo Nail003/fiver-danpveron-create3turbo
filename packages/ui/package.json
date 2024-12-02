@@ -9,8 +9,16 @@
       "default": "./src/index.ts"
     },
     "./button": {
-      "types": "./dist/src/index.d.ts",
       "default": "./src/button.tsx"
+    },
+    "./toast": {
+      "default": "./src/toast.tsx"
+    },
+    "./form": {
+      "default": "./src/form.tsx"
+    },
+    "./input": {
+      "default": "./src/input.tsx"
     },
     "./*": {
       "types": "./dist/src/*.d.ts",
