@@ -38,6 +38,7 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
     expect(trigger).toBeInTheDocument();
   });
 
@@ -53,6 +54,8 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const item1 = screen.getByText("Item 1");
@@ -77,9 +80,13 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const subTrigger = screen.getByText(/open submenu/i);
+
+    // Simulate user click which should open the subDropDownMenu
     expect(subTrigger).toBeInTheDocument();
 
     await userEvent.click(subTrigger);
@@ -108,11 +115,14 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const checkbox = screen.getByText("Checkbox Item");
     expect(checkbox).toBeInTheDocument();
 
+    // Simulate user click for toggling checkbox
     await userEvent.click(checkbox);
     expect(onCheckedChange).toHaveBeenCalledWith(true);
   });
@@ -139,6 +149,8 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const radioItem1 = screen.getByText("Radio Item 1");
@@ -147,6 +159,7 @@ describe("DropdownMenu Component", () => {
     expect(radioItem1).toBeInTheDocument();
     expect(radioItem2).toBeInTheDocument();
 
+    // Simulate user click to change radio button
     await userEvent.click(radioItem2);
     expect(onValueChange).toHaveBeenCalledWith("radio2");
   });
@@ -164,6 +177,8 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const label = screen.getByText("Menu Label");
@@ -188,6 +203,8 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const shortcut = screen.getByTestId("shortcut");
@@ -208,12 +225,16 @@ describe("DropdownMenu Component", () => {
     );
 
     const trigger = screen.getByRole("button", { name: /open menu/i });
+
+    // Simulate user click which should open the dropDownMenu
     await userEvent.click(trigger);
 
     const item1 = screen.getByText("Item 1");
     expect(item1).toBeInTheDocument();
 
     const outsideButton = screen.getByText("Outside Button");
+
+    // Simulate user click outside the dropDownMenu
     await userEvent.click(outsideButton, {
       pointerEventsCheck: PointerEventsCheckLevel.Never,
     });

@@ -2,12 +2,10 @@ import React from "react";
 
 import "@testing-library/jest-dom";
 
-import { Suspense } from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 import { api } from "~/trpc/server";
-import { PostCardSkeleton, PostList } from "../_components/posts";
 import HomePage from "../page";
 
 // Mocking API calls
