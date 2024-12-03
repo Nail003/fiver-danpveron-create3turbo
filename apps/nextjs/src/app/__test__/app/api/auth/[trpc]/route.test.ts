@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { appRouter } from "@acme/api";
 
-import { GET, OPTIONS, POST } from "~/app/api/trpc/[trpc]/route"; // Adjust path
+import { GET, OPTIONS, POST } from "~/app/api/trpc/[trpc]/route";
 
 // Mock dependencies
 vi.mock("@trpc/server/adapters/fetch", () => ({

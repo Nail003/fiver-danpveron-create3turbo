@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { handlers } from "@acme/auth";
 
-import { GET, POST } from "~/app/api/auth/[...nextauth]/route"; // Adjust the path
+import { GET, POST } from "~/app/api/auth/[...nextauth]/route";
 
 // Mock dependencies
 vi.mock("@acme/auth", () => ({
