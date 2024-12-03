@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { invalidateSessionToken } from "@acme/auth";
 
-import { authRouter } from "../auth"; // Adjust the import path as needed
+import { authRouter } from "../auth";
 
 vi.mock("@acme/auth", () => ({
   invalidateSessionToken: vi.fn(),
